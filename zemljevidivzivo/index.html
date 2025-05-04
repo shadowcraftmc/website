@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowCraftMC</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      width: 100%;
+      height: 100%;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+      flex-direction: column;
+    }
+
+    #logo {
+      width: 200px;
+      height: 200px;
+      transition: width 0.3s, height 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    nav {
+      position: absolute;
+      top: 400%;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 2;
+    }
+
+    .seznam {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .seznam li {
+      font-size: 2vw;
+      margin: 10px 20px;
+      color: white;
+    }
+
+    .trenutnipredmet {
+      font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
+      .seznam li { font-size: 1.5vw; }
+      #logo { width: 250px; height: 250px; }
+    }
+
+    @media (min-width: 1200px) {
+      .seznam li { font-size: 1.2vw; }
+      #logo { height: 300px; width: 300px; }
+    }
+
+    @media (min-width: 950px) and (max-width: 1050px) {
+      .seznam li { font-size: 1.3vw; }
+    }
+
+    @media (min-width: 850px) and (max-width: 949px) {
+      .seznam li { font-size: 1.1vw; }
+    }
+
+    @media (min-width: 768px) and (max-width: 849px) {
+      .seznam li { font-size: 0.9vw; }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+
+      nav {
+        position: static;
+        width: 100%;
+        background-color: #333;
+        z-index: auto;
+      }
+
+      #logo {
+        position: static;
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+      }
+
+      .seznam {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .seznam li {
+        font-size: 4vw;
+      }
+
+   
+      .iframe-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 40px;
+        border-radius: 50px;
+      }
+
+      iframe {
+        width: 250px;
+        height: 350px; /* višje mape */
+      }
+
+    }
+
+    main {
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .iframe-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      background-color: cyan;
+      padding: 100px;
+      border-radius: 100px;
+    }
+
+    iframe {
+      width: 300px;
+      height: 300px;
+      border: none;
+    }
+
+    @media (min-width: 1200px) {
+      .iframe-wrapper {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      iframe {
+        width: 400px;
+        height: 400px;
+      }
+      @media (min-width: 800px){
+
+        main{margin-top:300px}
+      }
+    }
+    nav a {
+  text-decoration: none;     /* odstrani podčrtavanje */
+  color: white;              /* barva besedila - prilagodi po želji */
+  transition: color 0.3s;    /* gladka animacija */
+}
+
+nav a:hover {
+  color: red;                /* barva ob hoverju */
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav id="nav">
+      <ul class="seznam">
+        <li><a href="../index.html">Domača stran</a></li>
+        <li><a href="../novice/index.html">Novice</a></li>
+        <li class="trenutnipredmet">Zemljevidi v živo</li>
+        <li><a href="../pravila/index.html">Pravila</a></li>
+        <li><a href="../partnerji/index.html">Partnerji</a></li>
+      </ul>
+    </nav>
+
+    <img id="logo" src="../shadowcraft.png" alt="Shadowcraft Logo">
+  </header>
+
+  <main>
+    <div class="iframe-wrapper">
+      <iframe src="http://shadowcraft.globalelite.club:17232/?hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true"></iframe>
+      <iframe src="http://shadowcraft.globalelite.club:17232/?worldname=world_nether&hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true"></iframe>
+      <iframe src="http://shadowcraft.globalelite.club:17232/?worldname=world_the_end&hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true"></iframe>
+    </div>
+  </main>
+
+</body>
+</html>
