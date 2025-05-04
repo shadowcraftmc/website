@@ -64,11 +64,17 @@
     @media (min-width: 768px) {
       .seznam li { font-size: 1.5vw; }
       #logo { width: 250px; height: 250px; }
+      main {
+        margin-top: 150px; /* Povečan margin-top za zaslone večje od 768px */
+      }
     }
 
     @media (min-width: 1200px) {
       .seznam li { font-size: 1.2vw; }
       #logo { height: 300px; width: 300px; }
+      main {
+        margin-top: 200px; /* Povečan margin-top za večje zaslone */
+      }
     }
 
     @media (min-width: 950px) and (max-width: 1050px) {
@@ -113,27 +119,27 @@
         font-size: 4vw;
       }
 
-   
       .iframe-wrapper {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
         padding: 40px;
-        border-radius: 50px;
+        gap: 20px;
       }
 
       iframe {
         width: 250px;
-        height: 350px; /* višje mape */
+        height: 350px;
       }
 
+      main {
+        margin-top: 100px; /* Default margin-top za telefone in manjše zaslone */
+      }
     }
 
     main {
-      margin-top: 100px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
     }
 
     .iframe-wrapper {
@@ -163,20 +169,40 @@
         width: 400px;
         height: 400px;
       }
-      @media (min-width: 800px){
-
-        main{margin-top:300px}
-      }
     }
-    nav a {
-  text-decoration: none;     /* odstrani podčrtavanje */
-  color: white;              /* barva besedila - prilagodi po želji */
-  transition: color 0.3s;    /* gladka animacija */
-}
 
-nav a:hover {
-  color: red;                /* barva ob hoverju */
-}
+    nav a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    .map-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .map-button:hover {
+      background-color: red;
+      transform: scale(1.05);
+    }
+
+    .iframe-wrapper h2 {
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+      color: #111;
+    }
   </style>
 </head>
 <body>
@@ -197,11 +223,20 @@ nav a:hover {
 
   <main>
     <div class="iframe-wrapper">
-      <a href="http://shadowcraft.globalelite.club:17232/?hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true/">Zemljevid overworlda</a>
-      <a href="http://shadowcraft.globalelite.club:17232/?worldname=world_nether&hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true">Zemljevid netherja</a>
-      <a href="http://shadowcraft.globalelite.club:17232/?worldname=world_the_end&hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true">Zemljevid enda</a>
+      <h2>Zemljevidi 2D</h2>
+      <a class="map-button" href="http://shadowcraft.globalelite.club:17232/?hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true" target="_blank">Zemljevid overworlda (2D)</a>
+      <a class="map-button" href="http://shadowcraft.globalelite.club:17232/?worldname=world_nether&hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true" target="_blank">Zemljevid netherja (2D)</a>
+      <a class="map-button" href="http://shadowcraft.globalelite.club:17232/?worldname=world_the_end&hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true" target="_blank">Zemljevid enda (2D)</a>
+    </div>
+
+    <div class="iframe-wrapper">
+      <h2>Zemljevidi 3D</h2>
+      <a class="map-button" href="http://shadowcraft.globalelite.club:17232/?perspective=iso&hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true" target="_blank">Zemljevid overworlda (kmalu bo 3d)</a>
+      <a class="map-button" href="http://shadowcraft.globalelite.club:17232/?worldname=world_nether&perspective=iso&hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true" target="_blank">Zemljevid netherja (kmalu bo 3d)</a>
+      <a class="map-button" href="http://shadowcraft.globalelite.club:17232/?worldname=world_the_end&perspective=iso&hidechat=true&hidemenubar=true&hideplayerlist=true&hidecompass=true" target="_blank">Zemljevid enda (kmalu bo 3d)</a>
     </div>
   </main>
 
 </body>
 </html>
+
