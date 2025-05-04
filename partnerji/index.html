@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowCraftMC</title>
+  <style>
+    main {
+      margin-top: 300px;
+    }
 
+    .oblaccek {
+      background-color: cyan;
+      text-align: left;
+      margin-left: 100px;
+      margin-right: 1000px;
+      padding: 100px;
+      border-radius: 100px;
+      margin-bottom: 40px;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      width: 100%;
+      height: 100%;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+      flex-direction: column;
+    }
+
+    #logo {
+      width: 200px;
+      height: 200px;
+      transition: width 0.3s, height 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    nav {
+      position: absolute;
+      top: 400%;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 2;
+    }
+
+    .seznam {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .seznam li {
+      font-size: 2vw;
+      margin: 10px 20px;
+      color: white;
+    }
+
+    .trenutnipredmet {
+      font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
+      .seznam li { font-size: 1.5vw; }
+      #logo { width: 250px; height: 250px; }
+    }
+
+    @media (min-width: 1200px) {
+      .seznam li { font-size: 1.2vw; }
+      #logo { height: 300px; width: 300px; }
+    }
+
+    @media (min-width: 950px) and (max-width: 1050px) {
+      .seznam li { font-size: 1.3vw; }
+      .oblaccek { margin-right: 300px; }
+    }
+
+    @media (min-width: 850px) and (max-width: 949px) {
+      .seznam li { font-size: 1.1vw; }
+      .oblaccek { margin-right: 100px; }
+    }
+
+    @media (min-width: 768px) and (max-width: 849px) {
+      .seznam li { font-size: 0.9vw; }
+      .oblaccek {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+
+      nav {
+        position: static;
+        width: 100%;
+        background-color: #333;
+        z-index: auto;
+      }
+
+      #logo {
+        position: static;
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+      }
+
+      .seznam {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .seznam li {
+        font-size: 4vw;
+      }
+
+      main { margin-top: 100px; }
+
+      .oblaccek {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1650px){
+      .oblaccek { margin-right: 600px; }
+    }
+
+    @media (min-width: 1000px) and (max-width: 1200px){
+      .oblaccek { margin-right: 400px; }
+    }
+    li{margin-bottom:20px}
+    nav a {
+  text-decoration: none;     /* odstrani podčrtavanje */
+  color: white;              /* barva besedila - prilagodi po želji */
+  transition: color 0.3s;    /* gladka animacija */
+}
+
+nav a:hover {
+  color: red;                /* barva ob hoverju */
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav id="nav">
+      <ul class="seznam">
+        <li><a href="../index.html">Domača stran</a></li>
+        <li><a href="../novice/index.html">Novice</a></li>
+        <li><a href="../zemljevidivzivo/index.html">Zemljevidi v živo</a></li>
+        <li><a href="../pravila/index.html">Pravila</a></li>
+        <li class="trenutnipredmet">Partnerji</li>
+      </ul>
+    </nav>
+
+    <img id="logo" src="../shadowcraft.png" alt="Shadowcraft Logo">
+  </header>
+
+  <main>
+    <div class="oblaccek">
+      <p>Naši trenutni partnerji so:<br>
+        The kings - <a href="https://discord.gg/PmKXfJvs">https://discord.gg/PmKXfJvs</a><br>
+        BlackjackLand - <a href="https://discord.gg/pKEYzvzm">https://discord.gg/pKEYzvzm</a><br>
+        RebootCraft - <a href="https://discord.gg/sphv6ZsS">https://discord.gg/sphv6ZsS</a><br>
+      </p>
+    </div>
+
+    <div class="oblaccek">
+      <h3>Če želite postati partnerji shadowcraft, morate izpolnjevati določene pogoje – so pa tudi določeni plusi:</h3>
+
+      <h4><b>Plusi</b></h4>
+      <ul>
+        <li>24/7 online</li>
+        <li>tudi za cracked igralce</li>
+        <li>redno posodabljanje</li>
+        <li>trenutna omejitev 20 igralcev, vendar bi host zdržal do 200 igralcev</li>
+      </ul>
+
+      <h4><b>Minusi</b></h4>
+      <ul>
+        <li>operator bi bil le en igralec/partner server (vodja)</li>
+        <li>server še nima podpore za bedrock igralce (ni nujno, da jo bo dobil)</li>
+      </ul>
+
+      <h4><b>Pogoji</b></h4>
+      <ul>
+        <li>ta server v obvestilih označite za partner/vaš server</li>
+        <li>igralec lahko joina server, šele ko je član tega discord serverja</li>
+        <li>Morate imeti 10+ memberjov</li>
+      </ul>
+
+      <h4><b>Kaj morate vedeti</b></h4>
+      <ul>
+        <li>vodje lahko predlagajo plugine in če so primerni jih dodam</li>
+        <li>pod obvestila discord serverja bodo redno prihajale ankete, če se z čim resno ne strinjate in imate podporo članov, mi napišite na dm in bo anketa zaključena</li>
+        <li>server si želi imeti čim več igralcev, zato bomo v večini kakršnih koli primerov, delali v večinsko korist</li>
+        <li>server se še razvija, zato je kakršna koli pomoč dobrodošla</li>
+        <li>ob kakršnikoli težavi napišite v razdelek pomoč in bomo vodje probali čim hitreje rešiti težavo</li>
+        <li>na serverju ne bo anti grief plugina, ker zaupamo svojim igralcem, ob kakšni težavi mi pišite na dm</li>
+      </ul>
+    </div>
+  </main>
+
+</body>
+</html>
