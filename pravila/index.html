@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShadowCraftMC</title>
+  <style>
+     main{margin-top:300px
+     }
+     p{background-color:cyan;
+      text-align:left;
+      margin-left:100px;
+      margin-right:1000px;
+      padding:100px;
+      border-radius:100px}
+    body, html {  
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      width: 100%;
+      height: 100%;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      background-color: #f8f8f8;
+      flex-direction: column;
+    }
+
+    #logo {
+      width: 200px;
+      height: 200px;
+      transition: width 0.3s, height 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    nav {
+      position: absolute;
+      top: 400%;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 2;
+    }
+
+    .seznam {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .seznam li {
+      font-size: 2vw;
+      margin: 10px 20px;
+      color: white;
+    }
+
+    @media (min-width: 768px) {
+      .seznam li {
+        font-size: 1.5vw;
+      }
+
+      #logo {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .seznam li {
+        font-size: 1.2vw;
+      }
+
+      #logo {
+        height: 300px;
+        width: 300px;
+      }
+    }
+
+    .trenutnipredmet {
+      font-weight: bold;
+    }
+    @media (min-width: 950px) and (max-width: 1050px) {
+      .seznam li {
+        font-size: 1.3vw;
+
+      }
+      p{margin-right:300px;}
+    }
+
+    @media (min-width: 850px) and (max-width: 949px) {
+      .seznam li {
+        font-size: 1.1vw;
+
+      }
+      p{margin-right:100px;}
+    }
+
+    @media (min-width: 768px) and (max-width: 849px) {
+      .seznam li {
+        font-size: 0.9vw;
+      }
+      p{text-align:center;
+      margin-right:0px;
+      margin-left:0px;}
+    }
+
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+
+      nav {
+        position: static;
+        width: 100%;
+        background-color: #333;
+        z-index: auto;
+      }
+
+      #logo {
+        position: static;
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+      }
+
+      .seznam {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .seznam li {
+        font-size: 4vw;
+      }
+      main{margin-top:100px;
+        }
+        p{text-align:center;
+          margin-left:0px;
+          margin-right:0px;}
+    }
+    @media (min-width: 1200px) and (max-width: 1650px){
+    p{margin-right:600px;}}
+     @media (min-width: 1000px) and (max-width: 1200px){
+    p{margin-right:400px;}}
+nav a {
+  text-decoration: none;     /* odstrani podčrtavanje */
+  color: white;              /* barva besedila - prilagodi po želji */
+  transition: color 0.3s;    /* gladka animacija */
+}
+
+nav a:hover {
+  color: red;                /* barva ob hoverju */
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav id="nav">
+      <ul class="seznam">
+        <li ><a href="../index.html">Domača stran</a></li>
+        <li ><a href="../novice/index.html">Novice</a></li>
+        <li><a href="../zemljevidivzivo/index.html">Zemljevidi v živo</a></li>
+        <li class="trenutnipredmet">Pravila</li>
+        <li><a href="../partnerji/index.html">Partnerji<a/></li>
+      </ul>
+    </nav>
+
+    <img id="logo" src="../shadowcraft.png" alt="Shadowcraft Logo">
+  </header>
+  <main>
+
+    <p>Pravila:
+      <ol>
+        <li>Upoštevamo discord pravila.</li>
+        <li>Ne griefamo drugih baz in ne spawn killamo igralcev, če koga ubijemo mu pustimo do stvari.</li>
+        <li>Lahko igramo tudi na drugih konkurenčnih serverjih, če vas bo več na enem iz med njih se lahko zmenimo za partnerstvo.</li>
+        <li>Spoštujemo se!</li>
+        <li>Ne goljufamo (xray, fly, killaura)</li>
+        <li>Pomagamo si med sabo in skrbimo za boljšo skupnost.</li>
+        <li>Vsak ima lahko svojo trgovino, ni prepovedano, da 2 prodajata isto, saj se s tem ustvari konkurenca in znižujeta cene, da bi imela več strank.</li>
+        <li>Če naredite kakšno večjo farmo morate mi pisati na discord kje je, da jo registrirate.</li>
+        <li>Ni prepovedano snemati in streamati, v kratkem bo dodana komanda, ki jo boste morali uporabiti pred začetkom, da vsem v chat napiše, da se snema/streama trenutno.</li>
+        <li>Ob nejastnostih mi pišite na discord (najdete me na discord serverju pod rolo lastnik).</li>
+
+
+
+
+
+
+
+
+      </ol></p>
+  </main>
+
+
+</body>
+</html>
